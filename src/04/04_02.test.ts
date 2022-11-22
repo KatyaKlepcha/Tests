@@ -9,7 +9,7 @@ beforeEach(() => {
         title: 'New York',
         houses: [
             {
-                id:1,
+                id: 1,
                 buildedAt: 2012,
                 repaired: false,
                 address: {
@@ -20,7 +20,7 @@ beforeEach(() => {
                 }
             },
             {
-                id:2,
+                id: 2,
                 buildedAt: 2013,
                 repaired: false,
                 address: {
@@ -31,7 +31,7 @@ beforeEach(() => {
                 }
             },
             {
-                id:3,
+                id: 3,
                 buildedAt: 2014,
                 repaired: false,
                 address: {
@@ -68,14 +68,14 @@ beforeEach(() => {
     }
 })
 
-test('Houses should be destroyed', ()=>{
+test('Houses should be destroyed', () => {
     demolishHousesOnTheStreet(city, 'Red street')
 
     expect(city.houses.length).toBe(2)
     expect(city.houses[0].id).toBe(1)
 })
 
-test('building with correct stuff count',()=>{
+test('building with correct stuff count', () => {
 
     let buildings = getBuildingWithCorrectStuffCount(city.governmentBuildings, 200)
 
